@@ -1,4 +1,6 @@
 apply plugin: 'java'
+apply plugin: 'sonar-runner'
+apply plugin: 'jacoco'
 apply plugin: 'eclipse'
 apply plugin: 'war'
 
@@ -10,8 +12,8 @@ targetCompatibility = '1.8'
 // gradle sonarRunner [-Dsonar.host.url=... -Dsonar.jdbc.url=... -Dsonar.jdbc.username=... -Dsonar.jdbc.password=...]
 sonarRunner {
 	sonarProperties {
-		property "sonar.projectName", "Utility"
-		property "sonar.projectKey", "io.utility"
+		property "sonar.projectName", "Test"
+		property "sonar.projectKey", "io.test"
 		property "sonar.jacoco.reportPath", "${project.buildDir}/jacoco/test.exec"
 	}
 }
